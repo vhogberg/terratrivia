@@ -3,6 +3,11 @@
     src: url("../assets/fonts/Inter-VariableFont_opsz\,wght.ttf");
 }
 
+/*
+Title blue: #97e2ff
+Title green: #6fd7a3
+*/
+
 * {
     font-family: "Inter", "sans-serif";
 }
@@ -12,12 +17,18 @@ h3 {
     margin-bottom: 0.4rem;
     color: white;
 }
+p {
+    color: white;
+}
 
 span {
     font-weight: bold;
 }
 
 header {
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 1rem;
 }
 
@@ -60,21 +71,35 @@ button {
 }
 
 .category-level-1-button {
-    background-color: rgb(144, 255, 144); /* Soft pastel green */
+    background-color: rgb(144, 255, 144);
 }
 
 .category-level-2-button {
-    background-color: rgb(255, 255, 128); /* Soft pastel yellow */
+    background-color: rgb(255, 255, 128);
 }
 
 .category-level-3-button {
-    background-color: rgb(255, 204, 102); /* Soft pastel yellow-orange */
+    background-color: rgb(255, 204, 102);
 }
 
 .category-level-4-button {
-    background-color: rgb(255, 153, 102); /* Soft pastel orange */
+    background-color: rgb(255, 153, 102);
 }
 
 .category-level-5-button {
-    background-color: rgb(255, 102, 102); /* Soft pastel red */
+    background-color: rgb(255, 102, 102);
+}
+
+#next-question-button {
+    width: 150px;
+}
+
+#question-info-container {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Used to hide elements by adding this class */
+.hidden {
+    display: none;
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>TerraTrivia</title>
     <meta charset="UTF-8">
@@ -8,11 +9,12 @@
     <meta name="description" content="A geography trivia game 🌎">
     <meta name="generator" content="Visual Studio Code">
     <meta name="keywords" content="Geography. Quiz. Trivia. Game">
-    
+
     <link rel="stylesheet" href="styles/style.css?rnd=12345">
 </head>
+
 <body>
-    
+
 
     <header>
         <img id="logo" src="assets/logos/TerraTriviaLogo.png" alt="logo">
@@ -45,12 +47,39 @@
                     <button class="category-level-4-button" id="landmarks-level-4-button"><span>4</span></button>
                     <button class="category-level-5-button" id="landmarks-level-5-button"><span>5</span></button>
                 </div>
-                
             </div>
-            
+
         </section>
         <section id="quiz">
-
+            <h3>Question loading...</h3>
+            <button id="answer-1">
+                <span>
+                    Answer 1 loading...
+                </span>
+            </button>
+            <button id="answer-2">
+                <span>
+                    Answer 2 loading...
+                </span>
+            </button>
+            <button id="answer-3">
+                <span>
+                    Answer 3 loading...
+                </span>
+            </button>
+            <button id="answer-4">
+                <span>
+                    Answer 4 loading...
+                </span>
+            </button>
+            <div id="question-info-container">
+                <button id="next-question-button">
+                    <span>
+                        Next question
+                    </span>
+                </button>
+                <p>0/10 questions answered.</p>
+            </div>
         </section>
     </main>
 
@@ -59,5 +88,8 @@
         <a href="https://www.flaticon.com/free-icons/question" title="question icons">Icon by Freepik</a>
     </footer>
 
+    <script src="scripts/script.js"></script>
+
 </body>
+
 </html>
