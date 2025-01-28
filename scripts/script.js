@@ -22,8 +22,32 @@ levelButtons.forEach(button => {
 });
 
 // Method for getting the questions assigned to a level
-function getQuestions(levelId) {
-    alert(levelId);
+async function getQuestions(levelId) {
+    // Grab just the category from the level id
+    const category = levelId.slice(0, -8);
+    // Grab the "level-x" part from the level id
+    const level = levelId.slice(-7);
+
+    // grab questions from JSON file
+    const response = await fetch ("./utils/questions.json");
+    const data = await response.json();
+
+    // filer out the correct 10 questions
+    startQuiz(data.categories[category][level]);
+}
+
+function startQuiz (questions) {
+    questions.forEach((questionObj) => {
+        const question = questionObj.question;
+        const answers = questionObj.answers;
+        const correctAnswer = questionObj.correct_answer;
+
+        console.log(question);
+        answers.forEach((a) => {
+            console.log(a);
+        })
+        console.log(correctAnswer);
+    });
 }
 
 /*
