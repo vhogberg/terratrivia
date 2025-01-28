@@ -30,7 +30,7 @@ header {
     max-width: fit-content;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     margin-top: 3rem;
 }
 
@@ -158,7 +158,7 @@ a {
     }
 }
 
-/* For smaller screens (0 - 530px width) */
+/* For extra small screens (0 - 350px width) */
 @media screen and (max-width: 350px) {
     h3 {
         font-size: 14px;

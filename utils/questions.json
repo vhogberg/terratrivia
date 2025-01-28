@@ -1,0 +1,43 @@
+{
+    "categories": {
+        "countries": {
+            "level-1": [
+                {
+                    "question": "What is the largest country by land area?",
+                    "answers": ["Russia", "China", "USA", "Brazil"],
+                    "correct_answer": 1
+                },
+                {
+                    "question": "What country uses the currency won?",
+                    "answers": ["Indonesia", "South Africa", "Colombia", "South Korea"],
+                    "correct_answer": 4
+                }
+            ],
+            "level-2": [
+                {
+                    "question": "What is the second-largest country by land area?",
+                    "answers": ["Canada", "China", "USA", "Australia"],
+                    "correct_answer": 1
+                }
+            ]
+        },
+        "capitals": {
+            "level-1": [
+                {
+                    "question": "What is the capital of France?",
+                    "answers": ["Paris", "London", "Berlin", "Madrid"],
+                    "correct_answer": 1
+                }
+            ]
+        },
+        "landmarks": {
+            "level-1": [
+                {
+                    "question": "Where is the Eiffel Tower located?",
+                    "answers": ["Paris", "New York", "Tokyo", "Rome"],
+                    "correct_answer": 1
+                }
+            ]
+        }
+    }
+}
