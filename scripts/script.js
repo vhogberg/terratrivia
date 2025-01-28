@@ -7,6 +7,7 @@ const quizPage = document.getElementById("quiz");
 
 // Used to switch between homepage and quizpage
 quizPage.classList.add("hidden");
+// homePage.classList.add("hidden");
 
 // Button listener for choosing category and level
 const levelButtons = document.querySelectorAll(".category-level-button");
@@ -21,6 +22,11 @@ levelButtons.forEach(button => {
     })
 });
 
+// Global tracking variables
+let currentQuestionIndex = 0;
+let score = 0;
+let questions = [];
+
 // Method for getting the questions assigned to a level
 async function getQuestions(levelId) {
     // Grab just the category from the level id
@@ -32,22 +38,60 @@ async function getQuestions(levelId) {
     const response = await fetch ("./utils/questions.json");
     const data = await response.json();
 
-    // filer out the correct 10 questions
-    startQuiz(data.categories[category][level]);
+    // filter out the correct 10 questions
+    questions = data.categories[category][level];
+
+    // Reset tracking variables for a new quiz
+    currentQuestionIndex = 0;
+    score = 0;
+
+    // Display first question
+    displayQuestion();
 }
 
-function startQuiz (questions) {
-    questions.forEach((questionObj) => {
-        const question = questionObj.question;
-        const answers = questionObj.answers;
-        const correctAnswer = questionObj.correct_answer;
+function displayQuestion () {
 
-        console.log(question);
-        answers.forEach((a) => {
-            console.log(a);
-        })
-        console.log(correctAnswer);
+    // Check if there are remaining questions
+    if (currentQuestionIndex >= questions.length) {
+        // End the quiz and show the results
+        endQuiz();
+        return;
+    }
+
+    homePage.classList.add("hidden");
+    quizPage.classList.remove("hidden");
+
+    // Get the current question object
+    const questionObj = questions[currentQuestionIndex];
+    const question = questionObj.question;
+    const answers = questionObj.answers;
+
+    // Display the current question text
+    document.getElementById("question").textContent = question;
+
+    // Display the answer options
+    answers.forEach((answer, index) => {
+        const answerElement = document.getElementById(`answer-${index + 1}`);
+        answerElement.textContent = answer;
+        answerElement.onclick = () => checkAnswer(index + 1); // click handler
     });
+}
+
+// Function to check the user answer
+function checkAnswer(selectedAnswer) {
+    const correctAnswer = questions[currentQuestionIndex].correct_answer;
+
+    if (selectedAnswer === correctAnswer) {
+        score++;
+    }
+
+    // Move to the next question
+    currentQuestionIndex++;
+    displayQuestion();
+}
+
+function endQuiz() {
+    alert("Quiz done!")
 }
 
 /*

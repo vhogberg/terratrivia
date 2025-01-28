@@ -11,6 +11,46 @@
                     "question": "What country uses the currency won?",
                     "answers": ["Indonesia", "South Africa", "Colombia", "South Korea"],
                     "correct_answer": 4
+                },
+                {
+                    "question": "Which element has the chemical symbol 'Fe'?",
+                    "answers": ["Fluorine", "Iron", "Francium", "Iodine"],
+                    "correct_answer": 2
+                },
+                {
+                    "question": "In which year did World War II end?",
+                    "answers": ["1943", "1944", "1945", "1946"],
+                    "correct_answer": 3
+                },
+                {
+                    "question": "Which planet is known as the Red Planet?",
+                    "answers": ["Venus", "Jupiter", "Saturn", "Mars"],
+                    "correct_answer": 4
+                },
+                {
+                    "question": "Who painted the Mona Lisa?",
+                    "answers": ["Leonardo da Vinci", "Michelangelo", "Raphael", "Vincent van Gogh"],
+                    "correct_answer": 1
+                },
+                {
+                    "question": "What is the capital city of Japan?",
+                    "answers": ["Seoul", "Beijing", "Tokyo", "Bangkok"],
+                    "correct_answer": 3
+                },
+                {
+                    "question": "Which of these is not a primary color?",
+                    "answers": ["Red", "Blue", "Green", "Yellow"],
+                    "correct_answer": 3
+                },
+                {
+                    "question": "What is the hardest natural substance on Earth?",
+                    "answers": ["Gold", "Diamond", "Platinum", "Iron"],
+                    "correct_answer": 2
+                },
+                {
+                    "question": "Which continent is the largest by land area?",
+                    "answers": ["North America", "Africa", "Asia", "Europe"],
+                    "correct_answer": 3
                 }
             ],
             "level-2": [
