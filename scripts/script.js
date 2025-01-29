@@ -144,3 +144,4 @@ function returnHome() {
     homePage.classList.remove("hidden");
     footer.classList.remove("hidden");
 }
+document.getElementById("logo").addEventListener("click", returnHome);

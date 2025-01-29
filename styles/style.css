@@ -23,6 +23,7 @@ p {
 }
 
 span {
+    color: rgb(20, 20, 20);
     font-weight: bold;
 }
 
@@ -35,7 +36,7 @@ header {
 }
 
 #logo {
-    
+    cursor: pointer;
     max-width: 500px;
 }
 
@@ -121,9 +122,10 @@ button {
 
 #next-question-button {
     width: 150px;
-    margin: 5px 5px 10px 0px;
+    margin: 5px 0px 5px 0px;
 }
 
+/* Answer styling */
 .answer {
     margin: 0px 0px 10px 0px;
 }
@@ -153,10 +155,12 @@ button {
     display: none;
 }
 
+/* Link in footer */
 a {
     color: rgb(60, 86, 131);
 }
 
+/* Modal dialog window */
 dialog {
     background-color: rgb(32, 46, 71);
 
@@ -180,24 +184,41 @@ dialog button {
         max-width: 100%;
         height: auto;
     }
+
     header {
         margin: 1rem;
     }
+
     #categories-container {
         margin: 1rem;
         gap: 0.5rem;
     }
-    h3 {
+
+    .category h3 {
         font-size: 16px;
     }
+
     .category {
         padding: 0.5rem;
+    }
+
+    #next-question-button {
+        width: 120px;
+        padding: 0px 0px 0px 0px;
+    }
+
+    #next-question-button span {
+        font-size: 14px;
+    }
+
+    #number-of-questions-answered {
+        font-size: 14px;
     }
 }
 
 /* For extra small screens (0 - 350px width) */
 @media screen and (max-width: 350px) {
-    h3 {
+    .category h3 {
         font-size: 14px;
     }
 }
