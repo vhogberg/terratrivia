@@ -128,6 +128,26 @@ button {
     margin: 0px 0px 10px 0px;
 }
 
+.selected-answer {
+    box-shadow: 0 0 5px black, 0 0 5px black;
+    transition: 50ms;
+}
+
+.false-answer {
+    background-color: #d76f6f;
+    transition: 50ms;
+}
+
+.correct-answer {
+    background-color: #6fd7a3;
+    transition: 50ms;
+}
+
+.disabled {
+    pointer-events: none;
+    transition: 50ms;
+}
+
 /* Used to hide elements by adding this class */
 .hidden {
     display: none;
