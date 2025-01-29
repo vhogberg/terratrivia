@@ -95,7 +95,7 @@ function checkAnswer(selectedAnswer) {
     const correctAnswerElement = document.getElementById(`answer-${correctAnswer}`);
 
     // Add css classes that shows correct/false answers + selected answer
-    allAnswers.forEach (answer => {
+    allAnswers.forEach(answer => {
         answer.classList.add("disabled"); // So user cant click another answer
         answer.classList.add("false-answer");
     })
@@ -109,7 +109,7 @@ function nextQuestion() {
     // Move to the next question
     currentQuestionIndex++;
 
-    allAnswers.forEach (answer => {
+    allAnswers.forEach(answer => {
         answer.classList.remove("false-answer");
         answer.classList.remove("correct-answer");
         answer.classList.remove("selected-answer");
