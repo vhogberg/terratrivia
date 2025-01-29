@@ -5,6 +5,10 @@ const homePage = document.getElementById("home");
 // A single quiz level
 const quizPage = document.getElementById("quiz");
 
+const footer = document.querySelector("footer");
+
+const quizCompleteDialog = document.getElementById("quiz-complete-dialog");
+
 // Used to switch between homepage and quizpage
 quizPage.classList.add("hidden");
 // homePage.classList.add("hidden");
@@ -35,7 +39,7 @@ async function getQuestions(levelId) {
     const level = levelId.slice(-7);
 
     // grab questions from JSON file
-    const response = await fetch ("./utils/questions.json");
+    const response = await fetch("./utils/questions.json");
     const data = await response.json();
 
     // filter out the correct 10 questions
@@ -49,7 +53,7 @@ async function getQuestions(levelId) {
     displayQuestion();
 }
 
-function displayQuestion () {
+function displayQuestion() {
 
     // Check if there are remaining questions
     if (currentQuestionIndex >= questions.length) {
@@ -59,7 +63,9 @@ function displayQuestion () {
     }
 
     homePage.classList.add("hidden");
+    footer.classList.add("hidden");
     quizPage.classList.remove("hidden");
+
 
     // Get the current question object
     const questionObj = questions[currentQuestionIndex];
@@ -91,8 +97,31 @@ function checkAnswer(selectedAnswer) {
 }
 
 function endQuiz() {
-    alert("Quiz done!")
+    showGameOverDialog();
 }
+
+function showGameOverDialog() {
+    document.getElementById("result").textContent = "You got: " + score + "/10 correct!";
+    quizCompleteDialog.showModal();
+}
+
+function startQuizAgain() {
+    currentQuestionIndex = 0;
+    score = 0;
+    quizCompleteDialog.close();
+}
+
+function returnHome() {
+    quizCompleteDialog.close();
+    quizPage.classList.add("hidden");
+    homePage.classList.remove("hidden");
+    footer.classList.remove("hidden");
+}
+
+// Level over dialog button listeners
+document.getElementById("play-again-button").addEventListener("click", startQuizAgain);
+document.getElementById("return-home-button").addEventListener("click", returnHome);
+
 
 /*
 

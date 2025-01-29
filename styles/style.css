@@ -137,6 +137,23 @@ a {
     color: rgb(60, 86, 131);
 }
 
+dialog {
+    background-color: rgb(32, 46, 71);
+
+    border-color: white;
+    border-width: 1px;
+    border-radius: 8px;
+}
+
+dialog::backdrop {
+    backdrop-filter: blur(3px);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+dialog button {
+    margin: 0.5rem 0px 0px 0px;
+}
+
 /* For smaller screens (0 - 530px width) */
 @media screen and (max-width: 530px) {
     #logo {
