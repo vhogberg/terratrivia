@@ -211,6 +211,9 @@ dialog button {
     #number-of-questions-answered {
         font-size: 14px;
     }
+    a {
+        font-size: 14px;
+    }
 }
 
 /* Fined tuned sizing for smaller screens */
@@ -218,16 +221,31 @@ dialog button {
     .category h3 {
         font-size: 20px;
     }
+    span {
+        font-size: 16px;
+    }
 }
 
 @media screen and (min-width: 351px) and (max-width: 499px) {
     .category h3 {
         font-size: 16px;
     }
+    span {
+        font-size: 14px;
+    }
+    .category-level-button {
+        padding: 0.5rem;
+    }
 }
 
 @media screen and (max-width: 350px) {
     .category h3 {
         font-size: 14px;
+    }
+    span {
+        font-size: 14px;
+    }
+    .category-level-button {
+        padding: 0.4rem;
     }
 }
