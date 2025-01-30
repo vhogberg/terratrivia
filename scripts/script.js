@@ -145,4 +145,11 @@ function returnHome() {
     homePage.classList.remove("hidden");
     footer.classList.remove("hidden");
 }
-document.getElementById("logo").addEventListener("click", returnHome);
+// Click on logo to return home
+document.getElementById("logo").addEventListener("click", () => {
+    // Must reset this so it doesn't bug out
+    currentQuestionIndex = 0;
+    score = 0;
+    nextQuestion();
+    returnHome();
+} );
