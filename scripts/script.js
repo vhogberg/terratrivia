@@ -134,6 +134,7 @@ function startQuizAgain() {
     score = 0;
     document.getElementById("number-of-questions-answered").textContent = currentQuestionIndex + "/10 questions answered.";
     quizCompleteDialog.close();
+    displayQuestion();
 }
 
 // Return home to choose another level
