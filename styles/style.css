@@ -140,7 +140,8 @@ button {
 }
 
 .selected-answer {
-    box-shadow: 0 0 5px black, 0 0 5px black;
+    box-shadow: 0 0 10px black, 0 0 10px black;
+    outline: black solid 2px;
     transition: 50ms;
 }
 
